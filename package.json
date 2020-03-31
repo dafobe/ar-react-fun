@@ -1,0 +1,23 @@
+{
+  "name": "ar-react-fun",
+  "version": "0.0.1",
+  "description": "AR and React fun",
+  "main": "src/index.js",
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.0.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && npm run server",
+    "server": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
