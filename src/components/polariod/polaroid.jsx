@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './polaroid.scss';
 import Button from '../button';
-import ExpandableButton from '../expandableButton';
+import './polaroid.scss';
 
 const getCounterIncrementerHandler = (counter, count = 0) => () => counter(count + 1);
 
@@ -13,18 +12,13 @@ function Polaroid() {
 
     return (
         <div className="polaroid">
-            <p>
-                 Has pulsado {count} veces
-            </p>
+            Has pulsado {count} veces
             <p>
                 <Button onclick={onIncrementHandler}>Click me!</Button>
             </p>
             <p>
                 <Button onclick={onResetHandler}>Reset me!</Button>
             </p>
-            <div>
-                <ExpandableButton>Filtrar</ExpandableButton>
-            </div>
         </div>
     );
 }
