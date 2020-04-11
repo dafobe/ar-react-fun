@@ -36,6 +36,10 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
+                // Allow JSX imports without extension
+                resolve: {
+                    extensions: ['.js', '.jsx'],
+                },
             },
             {
                 test: /\.scss$/,
