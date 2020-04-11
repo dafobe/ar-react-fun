@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import IconButton from '../iconButton';
+import React from 'react';
 import './card.scss';
 
 
 function Card(props) {
+    const { children } = props;
     return (
         <div className="mdc-card">
-            <div className="mdc-card__primary-action">
+            {children}
+            {/* <div className="mdc-card__primary-action">
                 <div className="mdc-card__media" style={{ 'background-image': 'url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;)' }} />
                 <div className="demo-card__primary">
                     <h2 className="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
@@ -27,7 +28,7 @@ function Card(props) {
                     <IconButton type="share" />
                     <IconButton type="more_vert" />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

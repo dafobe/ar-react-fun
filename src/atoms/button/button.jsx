@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
 import { MDCRipple } from '@material/ripple';
+import React, { useEffect, useRef } from 'react';
 import './button.scss';
 
 function Button(props) {
     const buttonElement = useRef(null);
-    const [disabled, setDisabled] = useState(false);
-    const { onclick, children } = props;
+    const { onclick, extraClassName, children } = props;
 
     useEffect(() => {
         const buttonRipple = new MDCRipple(buttonElement.current);
@@ -13,7 +12,7 @@ function Button(props) {
     }, []);
 
     return (
-        <button type="button"  ref={buttonElement} className="mdc-button mdc-button--outlined" disabled={disabled} onClick={onclick}>
+        <button type="button" ref={buttonElement} className={`mdc-button mdc-button--outlined ${extraClassName}`} onClick={onclick}>
             <div className="mdc-button__ripple" />
             <span className="mdc-button__label">{children}</span>
         </button>

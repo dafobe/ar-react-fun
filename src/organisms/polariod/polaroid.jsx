@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../button';
+import Button from '../../atoms/button';
 import './polaroid.scss';
 
 const getCounterIncrementerHandler = (counter, count = 0) => () => counter(count + 1);

@@ -1,7 +1,7 @@
 import React from 'react';
-import Polaroid from '../../components/polariod';
-import { Grid, Cell } from '../../components/grid';
-import Card from '../../components/card';
+import Polaroid from '../../organisms/polariod';
+import { Grid, Cell } from '../../atoms/grid';
+import Card from '../../atoms/card';
 
 function Layout() {
     return (
