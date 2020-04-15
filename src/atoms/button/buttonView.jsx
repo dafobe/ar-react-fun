@@ -1,7 +1,11 @@
 import React, { forwardRef } from 'react';
 
+const defaultOnClick = (label) => () => console.log(`Clicked Button ${label}`);
+
 function ButtonView(props, ref) {
-    const { extraClassName, label = 'Button', onclick, borderType } = props;
+    const {
+        extraClassName, label = 'Button', onclick = defaultOnClick(label), borderType,
+    } = props;
     const borderTypeClass = borderType === 'outlined' ? 'mdc-button--outlined' : '';
     return (
         <button
