@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Layout from './templates/layout';
+import Home from './templates/home';
 
-render(<Layout />, document.querySelector('#app'));
+render(<Home />, document.querySelector('#app'));
