@@ -14,7 +14,7 @@ function Polaroid() {
         <div className="polaroid">
             Has pulsado {count} veces
             <p>
-                <Button onclick={onIncrementHandler}>Click me!</Button>
+                <Button onclick={onIncrementHandler} borderType="outlined">Click me!</Button>
             </p>
             <p>
                 <Button onclick={onResetHandler}>Reset me!</Button>
