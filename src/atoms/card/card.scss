@@ -1,5 +1,24 @@
 @use "@material/card";
 @include card.core-styles;
-.card{
 
+.rfs-card {
+    padding: 1rem 0;
+
+    &__primary-action {
+        &__title {
+            padding: 0 1rem;
+            margin: 0;
+        }
+
+        &__subtitle {
+            padding: 0 1rem;
+            margin: 0;
+        }
+    }
+    &__media {
+        margin: 0;
+    }
+    &__actions {
+        padding: 16px 0;
+    }
 }
