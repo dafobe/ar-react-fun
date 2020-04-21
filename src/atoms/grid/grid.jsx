@@ -1,6 +1,15 @@
 import React from 'react';
 import './grid.scss';
 
+export function InnerGrid(props) {
+    const { children } = props;
+    return (
+        <div className="mdc-layout-grid__inner">
+            {children}
+        </div>
+    );
+}
+
 function Grid(props) {
     const { children, fixedColum, align } = props;
     return (
@@ -8,9 +17,9 @@ function Grid(props) {
              ${fixedColum ? 'mdc-layout-grid--fixed-column-width' : ''}
              ${align ? `mdc-layout-grid--align-${align}` : ''}`}
         >
-            <div className="mdc-layout-grid__inner">
+            <InnerGrid>
                 {children}
-            </div>
+            </InnerGrid>
         </div>
     );
 }
