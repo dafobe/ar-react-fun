@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from '../../atoms/card';
-import { Cell, Grid } from '../../atoms/grid';
-import Polaroid from '../../organisms/polariod';
+import { Cell, Grid, InnerGrid } from '../../atoms/grid';
+import Board from '../../organisms/board';
 import Header from '../../organisms/header';
 import Marker from '../../organisms/marker';
 
@@ -10,14 +9,21 @@ import App from '../app';
 function Home() {
     return (
         <App>
-            <Header />
+            {/* <Header /> */}
 
             <Grid>
                 <Cell size={8}>
-                    <Polaroid />
+                    <Board />
                 </Cell>
                 <Cell size={4}>
-                    <Marker />
+                    <InnerGrid>
+                        <Cell size={12}>
+                            <Marker title="Hiro" subtitle="marker" media="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" />
+                        </Cell>
+                        <Cell size={12}>
+                            <Marker title="QR Hiro" subtitle="qr marker" media="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/qrcode-in-marker.png" />
+                        </Cell>
+                    </InnerGrid>
                 </Cell>
             </Grid>
 
