@@ -7,7 +7,9 @@ const icons = [<IconButton key="share" type="share" />, <IconButton key="more-op
 const buttons = [<Button key="load">Load</Button>];
 
 function Marker(props) {
-    return <Card title="Hiro" subtitle="marker" icons={icons} buttons={buttons} media="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" />;
+    const { title = 'Title', subtitle = 'Subtitle', media } = props;
+
+    return <Card title={title} subtitle={subtitle} icons={icons} buttons={buttons} media={media} />;
 }
 
 export default Marker;
