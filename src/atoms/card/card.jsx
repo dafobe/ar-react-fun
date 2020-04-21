@@ -24,7 +24,7 @@ function Card(props) {
     } = props;
 
     return (
-        <div className="mdc-card">
+        <div className="rfs-card mdc-card">
             <PrimaryAction>
                 {media && <RichMedia media={media} />}
                 {title && <Headline6><h2 className="rfs-card__primary-action__title">{title}</h2></Headline6>}
