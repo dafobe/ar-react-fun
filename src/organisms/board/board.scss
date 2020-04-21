@@ -1,0 +1,21 @@
+.rfs-board {
+    color: #000;
+    // @include button.container-fill-color(#fabada);
+    background-color: #fabada;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+
+    &__header {
+        width: 100%;
+        height: 30vh;
+    }
+
+    &__canvas {
+        // height: 100px;
+        height: 60vh;
+        width: 100%;
+    }
+}
