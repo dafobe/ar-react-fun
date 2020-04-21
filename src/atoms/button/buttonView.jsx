@@ -11,7 +11,7 @@ function ButtonView(props, ref) {
         <button
             type="button"
             ref={ref}
-            className={`rofosch-button mdc-button ${borderTypeClass} ${extraClassName || ''}`}
+            className={`rfs-button mdc-button ${borderTypeClass} ${extraClassName || ''}`}
             onClick={onclick}
         >
             <div className="mdc-button__ripple" />
