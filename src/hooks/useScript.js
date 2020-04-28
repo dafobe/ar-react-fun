@@ -7,6 +7,7 @@ const useScript = (url, onLoad = () => console.log(`SCRIPT LOADED: ${url}`)) => 
 
             script.src = url;
             script.async = true;
+            script.defer = true;
             script.onload = onLoad;
             document.querySelector('head').appendChild(script);
 
