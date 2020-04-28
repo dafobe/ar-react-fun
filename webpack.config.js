@@ -77,8 +77,10 @@ module.exports = {
     },
     devtool: 'eval-cheap-module-source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'assets')],
         clientLogLevel: 'debug',
+        host: '0.0.0.0',
+        https: true,
     },
     plugins: [cleanWebpackPlugin, htmlWebpackPlugin, miniCssExtractPlugin],
 };
