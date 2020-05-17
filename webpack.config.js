@@ -4,8 +4,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    filename: 'index.html',
     title: 'AR React Fun Fun Fun',
     template: 'templates/index.html',
+});
+
+const htmlWebpackPluginVanilla = new HtmlWebpackPlugin({
+    filename: 'vanilla.html',
+    title: 'AR React Vanilla Fun',
+    template: 'templates/vanilla.html',
 });
 
 const cleanWebpackPlugin = new CleanWebpackPlugin({
@@ -82,5 +89,5 @@ module.exports = {
         host: '0.0.0.0',
         https: true,
     },
-    plugins: [cleanWebpackPlugin, htmlWebpackPlugin, miniCssExtractPlugin],
+    plugins: [cleanWebpackPlugin, htmlWebpackPlugin, htmlWebpackPluginVanilla, miniCssExtractPlugin],
 };
