@@ -1,19 +1,17 @@
 import React from 'react';
+import './scene.scss';
 
 function SceneView(props) {
-    const { children, debug = false } = props;
+    const { children, debug = false, barcodeMarkers = true } = props;
 
     return (
         <a-scene
+            class="rfs-scene"
             // stats
             embedded
-            // vr-mode-ui="enabled: true;"
             arjs={`debug: ${debug};
             debugUIEnabled: ${debug};
-            trackingMethod: best;
-            sourceType: webcam;
-            detectionMode: mono_and_matrix;
-            matrixCodeType: 3x3;
+            ${barcodeMarkers ? 'detectionMode: mono_and_matrix; matrixCodeType: 3x3' : ''}
             `}
         >
             {children}
